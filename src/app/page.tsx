@@ -1,65 +1,134 @@
-import Image from "next/image";
+import React from "react";
+import type { Metadata } from "next";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
+import FileEraserPage from "@/components/FileEraserPage";
+import {
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+  generateSoftwareProductSchema,
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+  getCanonicalUrl,
+  getKeywords,
+} from "@/lib/seo";
+
+// High-quality metadata for search engines and AI agents
+export const metadata: Metadata = {
+  title: "File Eraser Software — Secure Data Eraser & File Deletion Tool",
+  description: "Looking for a reliable file eraser? D-Secure File Eraser is a certified software to permanently erase files beyond recovery. The ultimate data eraser for Windows & Mac.",
+  alternates: {
+    canonical: getCanonicalUrl("/"),
+  },
+  keywords: getKeywords(),
+  openGraph: {
+    title: "D-Secure File Eraser — Certified Data Erasure Software",
+    description: "Permanently delete files, folders, and partition traces beyond forensic recovery with GDPR compliant file deletion.",
+    url: getCanonicalUrl("/"),
+    siteName: "D-Secure File Eraser",
+    images: [
+      {
+        url: "https://dsecuretech.com/logo-white.svg",
+        width: 1200,
+        height: 630,
+        alt: "D-Secure File Eraser Data Sanitization Software",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "D-Secure File Eraser — Certified Data Erasure Software",
+    description: "Permanently delete files, folders, and partition traces beyond forensic recovery with NIST 800-88 compliance.",
+    site: "@dsecuretech",
+    images: ["https://dsecuretech.com/logo-white.svg"],
+  },
+};
 
 export default function Home() {
+  // Generate all schema models
+  const orgSchema = generateOrganizationSchema();
+  const websiteSchema = generateWebSiteSchema();
+  const productSchema = generateSoftwareProductSchema(
+    "D-Secure File Eraser",
+    "Certified data erasure software featuring 27+ international sanitization standards (NIST 800-88, DoD 5220.22-M) with digital certificates of destruction.",
+    {
+      price: "39.99",
+      ratingValue: 4.9,
+      reviewCount: 312,
+      features: [
+        "Secure File & Folder Shredding",
+        "Partition & Volume Sanitization",
+        "Free Space Erasure",
+        "Tamper-proof Certificate Generation",
+        "Cloud-based Admin Console & Group Policy support"
+      ]
+    }
+  );
+  
+  const faqs = [
+    {
+      question: "How is D-Secure File Eraser different from simply deleting files?",
+      answer: "When you delete a file normally, only the reference to the data is removed—the actual data remains on your drive and can be recovered with forensic tools. D-Secure File Eraser overwrites the data multiple times using internationally recognized algorithms (like NIST 800-88, DoD 5220.22-M), making recovery impossible."
+    },
+    {
+      question: "What erasure standards does File Eraser support?",
+      answer: "D-Secure File Eraser supports 27+ erasure standards including NIST 800-88 Clear/Purge, DoD 5220.22-M (3-pass and 7-pass), Gutmann (35-pass), HMG IS5, RCMP TSSIT OPS-II, Peter Gutmann's method, and many more."
+    },
+    {
+      question: "Will I receive proof of erasure for compliance audits?",
+      answer: "Absolutely. After every erasure operation, D-Secure generates a detailed PDF certificate that includes file details, erasure method used, timestamp, verification status, and a tamper-proof hash. These certificates are suitable for regulatory audits and compliance documentation."
+    },
+    {
+      question: "How to securely delete files on Windows 10/11 beyond recovery?",
+      answer: "To permanently delete files windows 10/11 beyond recovery, you need dedicated secure file deletion software. D-Secure File Eraser overwrites data at the sector level, making it the perfect secure delete tool for sensitive documents."
+    },
+    {
+      question: "Is there a file shredder software free download or trial?",
+      answer: "Yes, you can obtain the D-Secure file shredder software free download evaluation version to test its certified file erasure and data erasure software for files capabilities on your local storage devices."
+    }
+  ];
+  const faqSchema = generateFAQSchema(faqs);
+
+  const breadcrumbs = [
+    { name: "Home", item: "https://dsecuretech.com" },
+    { name: "Products", item: "https://dsecuretech.com/products" },
+    { name: "File Eraser", item: "/" },
+  ];
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      {/* Schema.org JSON-LD scripts for Google Rich Snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      <Header />
+      <main className="flex-grow">
+        <FileEraserPage />
       </main>
-    </div>
+      <Footer />
+      <BackToTop />
+    </>
   );
 }
