@@ -858,10 +858,13 @@ const FileEraserPage: React.FC = memo(function FileEraserPage() {
                       animation: "float 4s ease-in-out infinite",
                     }}
                   >
-                    <img
+                    <Image
                       src="https://res.cloudinary.com/dhwi5wevf/image/upload/v1780378791/dmwbyiicwpmfelcsdufl.png"
                       alt="D-Secure File Eraser Box"
+                      width={500}
+                      height={640}
                       className="w-[300px] sm:w-[400px] lg:w-[500px] drop-shadow-2xl object-contain"
+                      priority
                     />
                     {/* Bottom Reflection */}
                     <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[180px] lg:w-[240px] h-16 bg-gradient-to-t from-orange-600/20 to-transparent blur-xl rounded-full"></div>

@@ -360,7 +360,6 @@ export const generateSoftwareProductSchema = (
       url: SEO_CONFIG.parentSiteUrl,
       logo: `${SEO_CONFIG.parentSiteUrl}/logo-white.svg`,
     },
-    image: `${SEO_CONFIG.parentSiteUrl}/logo-white.svg`,
     softwareVersion: "2025.1.0",
     featureList: options.features || [
       // --- Core Erasure Features ---
