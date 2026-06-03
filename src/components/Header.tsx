@@ -15,8 +15,8 @@ const MOBILE_PRODUCTS = {
     items: [
       { name: "Drive Eraser", href: `${DSECURE_BASE_URL}/products/drive-eraser` },
       { name: "Drive Eraser Diagnostic", href: `${DSECURE_BASE_URL}/products/drive-eraser-diagnostic` },
-      { name: "File Eraser", href: `${DSECURE_BASE_URL}/products/file-eraser` },
-      { name: "File Eraser Network", href: `${DSECURE_BASE_URL}/products/file-eraser-network` },
+      { name: "D-Secure File Eraser", href: `${DSECURE_BASE_URL}/products/file-eraser` },
+      { name: "D-Secure File Eraser Network", href: `${DSECURE_BASE_URL}/products/file-eraser-network` },
       { name: "Smartphone Eraser", href: `${DSECURE_BASE_URL}/products/smartphone-eraser` },
       { name: "Virtual Machine Eraser", href: `${DSECURE_BASE_URL}/products/virtual-machine-eraser` },
       { name: "Removable Media Eraser", href: `${DSECURE_BASE_URL}/products/removable-media-eraser` },
@@ -207,30 +207,29 @@ export default function Header() {
   return (
     <header
       className={`sticky top-0 z-50 bg-white border-b border-slate-200/80 transition-all duration-300 ${
-        hidden
-          ? "-translate-y-full opacity-0"
-          : "translate-y-0 opacity-100"
+        hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
       }`}
     >
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="flex items-center justify-between h-16 lg:h-[72px]">
           {/* Logo + Product Name */}
           <a
-            href="/"
+            href="https://dsecuretech.com"
             className="flex items-center gap-2.5 hover:opacity-80 transition-opacity shrink-0"
-            title="File Eraser — D-Secure Data Erasure Software"
+            title="D-Secure File Eraser — D-Secure Data Erasure Software"
           >
             <Image
-              src="https://res.cloudinary.com/dhwi5wevf/image/upload/v1759928831/bwsswefvwhdvuy8yrplk.png"
-              alt="File Eraser Logo"
+              src="https://res.cloudinary.com/dhwi5wevf/image/upload/v1759554063/iffkbzphl8zhxei0prpn.svg"
+              alt="D-Secure File Eraser Logo"
               width={36}
               height={36}
               priority
               className="h-8 lg:h-9 w-auto"
+              style={{ width: "auto" }}
             />
-            <span className="text-lg lg:text-xl font-bold text-slate-800 tracking-tight">
-              File Eraser
-            </span>
+            {/* <span className="text-lg lg:text-xl font-bold text-slate-800 tracking-tight">
+              D-Secure File Eraser
+            </span> */}
           </a>
 
           {/* Desktop Navigation */}
@@ -243,8 +242,8 @@ export default function Header() {
                     onClick={toggleProducts}
                     className={`inline-flex items-center gap-1 px-4 py-2.5 text-sm font-medium transition-colors ${
                       productsOpen
-                        ? "text-emerald-700"
-                        : "text-slate-600 hover:text-emerald-700"
+                        ? "text-orange-700"
+                        : "text-slate-600 hover:text-orange-700"
                     }`}
                   >
                     {link.label}
@@ -259,8 +258,8 @@ export default function Header() {
                     onClick={toggleSolutions}
                     className={`inline-flex items-center gap-1 px-4 py-2.5 text-sm font-medium transition-colors ${
                       solutionsOpen
-                        ? "text-emerald-700"
-                        : "text-slate-600 hover:text-emerald-700"
+                        ? "text-orange-700"
+                        : "text-slate-600 hover:text-orange-700"
                     }`}
                   >
                     {link.label}
@@ -272,7 +271,7 @@ export default function Header() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="px-4 py-2.5 text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors"
+                  className="px-4 py-2.5 text-sm font-medium text-slate-600 hover:text-orange-700 transition-colors"
                   title={`${link.label} — D-Secure Tech`}
                 >
                   {link.label}
@@ -285,7 +284,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center">
             <a
               href={`${DSECURE_BASE_URL}/login`}
-              className="px-5 py-2.5 text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors"
+              className="px-5 py-2.5 text-sm font-medium text-slate-600 hover:text-orange-700 transition-colors"
               title="Login to D-Secure Dashboard"
             >
               Login
@@ -298,11 +297,25 @@ export default function Header() {
             className="lg:hidden p-2.5 rounded-lg hover:bg-slate-100 transition-colors"
             aria-label="Toggle navigation menu"
           >
-            <svg className="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+            <svg
+              className="w-6 h-6 text-slate-700"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+            >
               {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               )}
             </svg>
           </button>
@@ -342,12 +355,13 @@ export default function Header() {
           />
           <div className="absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl z-50 lg:hidden overflow-y-auto max-h-[80vh]">
             <nav className="px-4 py-3 flex flex-col">
-
               {/* Products — Accordion */}
               <button
                 onClick={toggleMobileProducts}
                 className={`flex items-center justify-between px-4 py-3.5 text-[15px] font-medium rounded-lg transition-colors ${
-                  mobileProductsOpen ? "text-emerald-700 bg-emerald-50/50" : "text-slate-700 hover:bg-slate-50"
+                  mobileProductsOpen
+                    ? "text-orange-700 bg-orange-50/50"
+                    : "text-slate-700 hover:bg-slate-50"
                 }`}
               >
                 Products
@@ -355,15 +369,19 @@ export default function Header() {
               </button>
 
               {mobileProductsOpen && (
-                <div className="ml-2 border-l-2 border-emerald-100 pl-3 mb-2">
+                <div className="ml-2 border-l-2 border-orange-100 pl-3 mb-2">
                   {Object.entries(MOBILE_PRODUCTS).map(([key, category]) => (
                     <div key={key}>
                       {/* Category tab — Eraser, Migration, etc */}
                       <button
-                        onClick={() => setMobileActiveProductTab(mobileActiveProductTab === key ? null : key)}
+                        onClick={() =>
+                          setMobileActiveProductTab(
+                            mobileActiveProductTab === key ? null : key,
+                          )
+                        }
                         className={`flex items-center justify-between w-full px-3 py-2.5 text-sm font-medium rounded-md transition-colors ${
                           mobileActiveProductTab === key
-                            ? "text-emerald-700 bg-emerald-50"
+                            ? "text-orange-700 bg-orange-50"
                             : "text-slate-600 hover:bg-slate-50"
                         }`}
                       >
@@ -378,7 +396,7 @@ export default function Header() {
                             <a
                               key={item.name}
                               href={item.href}
-                              className="block px-3 py-2 text-sm text-slate-500 hover:text-emerald-700 hover:bg-emerald-50/40 rounded-md transition-colors"
+                              className="block px-3 py-2 text-sm text-slate-500 hover:text-orange-700 hover:bg-orange-50/40 rounded-md transition-colors"
                               onClick={closeAll}
                             >
                               {item.name}
@@ -392,7 +410,7 @@ export default function Header() {
                   {/* Explore All Products link */}
                   <a
                     href={`${DSECURE_BASE_URL}/products`}
-                    className="block px-3 py-2.5 text-xs font-semibold text-emerald-600 uppercase tracking-wide hover:bg-emerald-50/40 rounded-md transition-colors"
+                    className="block px-3 py-2.5 text-xs font-semibold text-orange-600 uppercase tracking-wide hover:bg-orange-50/40 rounded-md transition-colors"
                     onClick={closeAll}
                   >
                     Explore All Products →
@@ -404,7 +422,9 @@ export default function Header() {
               <button
                 onClick={toggleMobileSolutions}
                 className={`flex items-center justify-between px-4 py-3.5 text-[15px] font-medium rounded-lg transition-colors ${
-                  mobileSolutionsOpen ? "text-emerald-700 bg-emerald-50/50" : "text-slate-700 hover:bg-slate-50"
+                  mobileSolutionsOpen
+                    ? "text-orange-700 bg-orange-50/50"
+                    : "text-slate-700 hover:bg-slate-50"
                 }`}
               >
                 Solutions
@@ -412,14 +432,18 @@ export default function Header() {
               </button>
 
               {mobileSolutionsOpen && (
-                <div className="ml-2 border-l-2 border-emerald-100 pl-3 mb-2">
+                <div className="ml-2 border-l-2 border-orange-100 pl-3 mb-2">
                   {Object.entries(MOBILE_SOLUTIONS).map(([key, category]) => (
                     <div key={key}>
                       <button
-                        onClick={() => setMobileActiveSolutionTab(mobileActiveSolutionTab === key ? null : key)}
+                        onClick={() =>
+                          setMobileActiveSolutionTab(
+                            mobileActiveSolutionTab === key ? null : key,
+                          )
+                        }
                         className={`flex items-center justify-between w-full px-3 py-2.5 text-sm font-medium rounded-md transition-colors ${
                           mobileActiveSolutionTab === key
-                            ? "text-emerald-700 bg-emerald-50"
+                            ? "text-orange-700 bg-orange-50"
                             : "text-slate-600 hover:bg-slate-50"
                         }`}
                       >
@@ -433,7 +457,7 @@ export default function Header() {
                             <a
                               key={item.name}
                               href={item.href}
-                              className="block px-3 py-2 text-sm text-slate-500 hover:text-emerald-700 hover:bg-emerald-50/40 rounded-md transition-colors"
+                              className="block px-3 py-2 text-sm text-slate-500 hover:text-orange-700 hover:bg-orange-50/40 rounded-md transition-colors"
                               onClick={closeAll}
                             >
                               {item.name}
@@ -446,7 +470,7 @@ export default function Header() {
 
                   <a
                     href={`${DSECURE_BASE_URL}/solutions`}
-                    className="block px-3 py-2.5 text-xs font-semibold text-emerald-600 uppercase tracking-wide hover:bg-emerald-50/40 rounded-md transition-colors"
+                    className="block px-3 py-2.5 text-xs font-semibold text-orange-600 uppercase tracking-wide hover:bg-orange-50/40 rounded-md transition-colors"
                     onClick={closeAll}
                   >
                     All Solutions →
@@ -455,11 +479,13 @@ export default function Header() {
               )}
 
               {/* Simple nav links — Resources, Partners, Trust Certificate, Support */}
-              {NAV_LINKS.filter((l) => l.label !== "Products" && l.label !== "Solutions").map((link) => (
+              {NAV_LINKS.filter(
+                (l) => l.label !== "Products" && l.label !== "Solutions",
+              ).map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="px-4 py-3.5 text-[15px] font-medium text-slate-700 hover:text-emerald-700 rounded-lg hover:bg-slate-50 transition-colors"
+                  className="px-4 py-3.5 text-[15px] font-medium text-slate-700 hover:text-orange-700 rounded-lg hover:bg-slate-50 transition-colors"
                   onClick={closeAll}
                 >
                   {link.label}
@@ -469,7 +495,7 @@ export default function Header() {
               {/* Login Button */}
               <a
                 href={`${DSECURE_BASE_URL}/login`}
-                className="mt-3 mb-1 bg-emerald-600 text-white px-5 py-3.5 rounded-xl text-[15px] font-semibold text-center hover:bg-emerald-700 transition-all"
+                className="mt-3 mb-1 bg-orange-600 text-white px-5 py-3.5 rounded-xl text-[15px] font-semibold text-center hover:bg-orange-700 transition-all"
                 onClick={closeAll}
               >
                 Login

@@ -10,14 +10,14 @@ import { DSECURE_BASE_URL } from "@/lib/constants";
 const colorClasses: Record<string, {
   hoverBorder: string; text: string; hoverText: string;
 }> = {
-  emerald: { hoverBorder: "hover:border-emerald-300", text: "text-emerald-600", hoverText: "group-hover:text-emerald-700" },
+  orange: { hoverBorder: "hover:border-orange-300", text: "text-orange-600", hoverText: "group-hover:text-orange-700" },
   blue:    { hoverBorder: "hover:border-blue-300",    text: "text-blue-600",    hoverText: "group-hover:text-blue-700" },
   cyan:    { hoverBorder: "hover:border-cyan-300",    text: "text-cyan-600",    hoverText: "group-hover:text-cyan-700" },
-  teal:    { hoverBorder: "hover:border-teal-300",    text: "text-teal-600",    hoverText: "group-hover:text-teal-700" },
+  amber:    { hoverBorder: "hover:border-amber-300",    text: "text-amber-600",    hoverText: "group-hover:text-amber-700" },
   rose:    { hoverBorder: "hover:border-rose-300",    text: "text-rose-600",    hoverText: "group-hover:text-rose-700" },
 };
 
-const c = (color: string) => colorClasses[color] || colorClasses.emerald;
+const c = (color: string) => colorClasses[color] || colorClasses.orange;
 
 // Solution card ka type
 interface SolutionCard {
@@ -32,18 +32,18 @@ const TABS: Record<string, { label: string; solutions: SolutionCard[] }> = {
   industry: {
     label: "Industries",
     solutions: [
-      { name: "Enterprise", desc: "Data security and sanitization for global corporations.", href: `${DSECURE_BASE_URL}/solutions/enterprise`, color: "emerald" },
-      { name: "Banking & Finance", desc: "Compliance-driven erasure for financial institutions.", href: `${DSECURE_BASE_URL}/solutions/data-erasure-banking-finance`, color: "emerald" },
-      { name: "Government", desc: "Secure sanitization for public sector & defense.", href: `${DSECURE_BASE_URL}/solutions/government`, color: "emerald" },
-      { name: "Healthcare", desc: "Privacy-first data disposal for healthcare providers.", href: `${DSECURE_BASE_URL}/solutions/healthcare`, color: "emerald" },
-      { name: "Education", desc: "Managing data privacy across academic institutions.", href: `${DSECURE_BASE_URL}/solutions/education`, color: "emerald" },
-      { name: "Non-Profit", desc: "Secure data disposal for NGOs & charities.", href: `${DSECURE_BASE_URL}/solutions/non-profit`, color: "emerald" },
+      { name: "Enterprise", desc: "Data security and sanitization for global corporations.", href: `${DSECURE_BASE_URL}/solutions/enterprise`, color: "orange" },
+      { name: "Banking & Finance", desc: "Compliance-driven erasure for financial institutions.", href: `${DSECURE_BASE_URL}/solutions/data-erasure-banking-finance`, color: "orange" },
+      { name: "Government", desc: "Secure sanitization for public sector & defense.", href: `${DSECURE_BASE_URL}/solutions/government`, color: "orange" },
+      { name: "Healthcare", desc: "Privacy-first data disposal for healthcare providers.", href: `${DSECURE_BASE_URL}/solutions/healthcare`, color: "orange" },
+      { name: "Education", desc: "Managing data privacy across academic institutions.", href: `${DSECURE_BASE_URL}/solutions/education`, color: "orange" },
+      { name: "Non-Profit", desc: "Secure data disposal for NGOs & charities.", href: `${DSECURE_BASE_URL}/solutions/non-profit`, color: "orange" },
     ],
   },
   specialized: {
     label: "Specialized",
     solutions: [
-      { name: "Service Providers", desc: "Scaleable erasure services for MSPs and MSSPs.", href: `${DSECURE_BASE_URL}/solutions/service-providers`, color: "teal" },
+      { name: "Service Providers", desc: "Scaleable erasure services for MSPs and MSSPs.", href: `${DSECURE_BASE_URL}/solutions/service-providers`, color: "amber" },
       { name: "ITAD", desc: "Maximize asset value with secure disposal workflows.", href: `${DSECURE_BASE_URL}/solutions/itad`, color: "cyan" },
     ],
   },
@@ -78,20 +78,20 @@ export default function SolutionsDropdown({ onClose }: { onClose: () => void }) 
               key={key}
               className={`w-full text-left px-5 py-3 text-sm font-medium transition-colors flex items-center gap-2 ${
                 activeTab === key
-                  ? "text-emerald-700 bg-white border-r-2 border-emerald-500 font-semibold"
+                  ? "text-orange-700 bg-white border-r-2 border-orange-500 font-semibold"
                   : "text-slate-600 hover:text-slate-900 hover:bg-white/60"
               }`}
               onClick={() => setActiveTab(key)}
             >
               {tab.label}
-              {activeTab === key && <ChevronRight className="w-3.5 h-3.5 ml-auto text-emerald-500" />}
+              {activeTab === key && <ChevronRight className="w-3.5 h-3.5 ml-auto text-orange-500" />}
             </button>
           ))}
 
           <div className="mt-6 px-5 text-center">
             <a
               href={`${DSECURE_BASE_URL}/solutions`}
-              className="bg-emerald-600 text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-emerald-700 transition-colors inline-block w-full text-center"
+              className="bg-orange-600 text-white px-4 py-2 rounded-lg text-xs font-bold hover:bg-orange-700 transition-colors inline-block w-full text-center"
               onClick={onClose}
             >
               All Solutions

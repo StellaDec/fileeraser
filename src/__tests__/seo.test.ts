@@ -36,7 +36,7 @@ describe("SEO Core Utilities Tests", () => {
     it("should return valid Organization schema structure", () => {
       const schema = generateOrganizationSchema();
       expect(schema["@type"]).toBe("Organization");
-      expect(schema.name).toBe("File Eraser");
+      expect(schema.name).toBe("D-Secure File Eraser");
       expect(schema.url).toBe(SEO_CONFIG.parentSiteUrl);
       expect(schema.logo["@type"]).toBe("ImageObject");
     });
@@ -47,7 +47,7 @@ describe("SEO Core Utilities Tests", () => {
     it("should return valid WebSite schema structure", () => {
       const schema = generateWebSiteSchema();
       expect(schema["@type"]).toBe("WebSite");
-      expect(schema.name).toBe("File Eraser");
+      expect(schema.name).toBe("D-Secure File Eraser");
       expect(schema.url).toBe(SEO_CONFIG.siteUrl);
     });
   });
@@ -56,21 +56,21 @@ describe("SEO Core Utilities Tests", () => {
   describe("generateSoftwareProductSchema", () => {
     it("should return valid Product schema with default options", () => {
       const schema = generateSoftwareProductSchema(
-        "File Eraser",
+        "D-Secure File Eraser",
         "Secure file deletion tool"
       );
       
       expect(schema["@type"]).toBe("Product");
-      expect(schema.name).toBe("File Eraser");
+      expect(schema.name).toBe("D-Secure File Eraser");
       expect(schema.description).toBe("Secure file deletion tool");
-      expect(schema.sku).toBe("file-eraser");
+      expect(schema.sku).toBe("d-secure-file-eraser");
       expect(schema.offers).toBeDefined();
       expect(schema.aggregateRating).toBeUndefined();
     });
 
     it("should include aggregateRating when rating options are provided", () => {
       const schema = generateSoftwareProductSchema(
-        "File Eraser",
+        "D-Secure File Eraser",
         "Secure file deletion tool",
         {
           ratingValue: 4.8,
@@ -130,13 +130,13 @@ describe("SEO Core Utilities Tests", () => {
       expect(keywords).toBeDefined();
       expect(keywords.length).toBeGreaterThan(50);
       expect(keywords).toContain("file eraser");
-      expect(keywords).toContain("file shredder");
+      expect(keywords).toContain("file eraser");
       expect(keywords).toContain("NIST 800-88 file erasure");
     });
 
     // Custom keywords override parameters
     it("should return the custom keywords list when passed as arguments", () => {
-      const customList = ["custom-eraser", "d-secure-pro-shredder"];
+      const customList = ["custom-eraser", "d-secure-pro-eraser"];
       const keywords = getKeywords(customList);
       // Verify karein ki custom keywords override override fully function kar raha hai
       expect(keywords).toEqual(customList);

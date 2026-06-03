@@ -25,7 +25,7 @@ function FooterColumn({ title, links }: Readonly<{ title: string; links: Readonl
           <li key={link.label}>
             <a
               href={link.href}
-              className="text-sm text-slate-400 hover:text-emerald-400 transition-colors"
+              className="text-sm text-slate-400 hover:text-orange-400 transition-colors"
               title={`${link.label} — D-Secure`}
               {...('external' in link && link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             >
@@ -52,23 +52,26 @@ export default function Footer() {
           {/* Brand Column — wider */}
           <div className="lg:col-span-3">
             <a
-              href="/"
+              href="https://dsecuretech.com"
               className="inline-flex items-center gap-2.5 mb-4 hover:opacity-80 transition-opacity"
-              title="File Eraser — D-Secure Data Erasure"
+              title="D-Secure File Eraser — D-Secure Data Erasure"
             >
               <Image
-                src="https://res.cloudinary.com/dhwi5wevf/image/upload/v1759928831/bwsswefvwhdvuy8yrplk.png"
-                alt="File Eraser Logo"
+                src="https://res.cloudinary.com/dhwi5wevf/image/upload/v1759398294/dsecure/logos/dsecure-logo-white.svg"
+                alt="D-Secure File Eraser Logo"
                 width={36}
                 height={36}
                 className="h-8 lg:h-9 w-auto"
+                style={{ width: "auto" }}
               />
-              <span className="text-lg font-bold text-white tracking-tight">
-                File Eraser
-              </span>
+              {/* <span className="text-lg font-bold text-white tracking-tight">
+                D-Secure File Eraser
+              </span> */}
             </a>
             <p className="text-sm text-slate-400 leading-relaxed mb-5">
-              Certified file erasure software to permanently delete files, folders, and traces beyond recovery. NIST 800-88 compliant with tamper-proof certificates.
+              Leading provider of Compliant data erasure solutions for
+              enterprises worldwide. Secure your data lifecycle with our
+              enterprise-grade security solutions.
             </p>
           </div>
 
@@ -102,17 +105,17 @@ export default function Footer() {
             <p className="text-xs text-slate-500">
               {`© ${currentYear} `}
               <a
-                href={'/'}
-                className="text-slate-400 hover:text-emerald-400 transition-colors"
+                href={"https://dsecuretech.com"}
+                className="text-slate-400 hover:text-orange-400 transition-colors"
               >
-             File Eraser
+                D-Secure Technologies Pvt. Ltd.
               </a>
               {" All rights reserved."}
             </p>
             {/* Status badge */}
-            <span className="inline-flex items-center gap-1.5 text-xs text-emerald-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              {" "}All systems operational
+            <span className="inline-flex items-center gap-1.5 text-xs text-orange-400">
+              <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse"></span>{" "}
+              All systems operational
             </span>
           </div>
 
@@ -122,7 +125,7 @@ export default function Footer() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-xs text-slate-500 hover:text-emerald-400 transition-colors"
+                className="text-xs text-slate-500 hover:text-orange-400 transition-colors"
               >
                 {link.label}
               </a>

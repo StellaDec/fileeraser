@@ -41,13 +41,13 @@ export const PRODUCT_LINKS = {
   },
   "file-eraser": {
     href: `${DSECURE_BASE_URL}/products/file-eraser`,
-    label: "File Eraser",
-    description: "Secure file & folder shredding beyond Recycle Bin",
+    label: "D-Secure File Eraser",
+    description: "Secure file & folder erasure beyond Recycle Bin",
     icon: "📄",
   },
   "file-eraser-network": {
     href: `${DSECURE_BASE_URL}/products/file-eraser-network`,
-    label: "File Eraser Network",
+    label: "D-Secure File Eraser Network",
     description: "Centralized enterprise network data sanitization",
     icon: "🌐",
   },
@@ -122,8 +122,8 @@ export const GALLERY_IMAGES = [
   },
   {
     url: "https://res.cloudinary.com/dhwi5wevf/image/upload/f_auto,q_auto/v1770725346/file-eraser-shredding.webp",
-    alt: "D-Secure File Eraser — File Shredding in Progress",
-    caption: "Secure Shredding",
+    alt: "D-Secure File Eraser — File Erasure in Progress",
+    caption: "Secure Erasure",
   },
   {
     url: "https://res.cloudinary.com/dhwi5wevf/image/upload/f_auto,q_auto/v1770725346/file-eraser-certificate.webp",
@@ -152,7 +152,7 @@ export const FOOTER_PRODUCT_LINKS = [
   { label: "All Products", href: `${DSECURE_BASE_URL}/products` },
   { label: "Drive Eraser", href: `${DSECURE_BASE_URL}/products/drive-eraser` },
   { label: "Drive Eraser Diagnostic", href: `${DSECURE_BASE_URL}/products/drive-eraser-diagnostic` },
-  { label: "File Eraser", href: `${DSECURE_BASE_URL}/products/file-eraser` },
+  { label: "D-Secure File Eraser", href: `${DSECURE_BASE_URL}/products/file-eraser` },
 ] as const;
 
 export const FOOTER_INDUSTRY_LINKS = [

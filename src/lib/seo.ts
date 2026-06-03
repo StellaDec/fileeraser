@@ -5,7 +5,7 @@
 
 // Site ka base configuration — fileeraser.dsecuretech.com ke liye
 export const SEO_CONFIG = {
-  siteName: "File Eraser",
+  siteName: "D-Secure File Eraser",
   siteUrl: "https://fileeraser.dsecuretech.com",
   parentSiteUrl: "https://dsecuretech.com",
   defaultImage: "https://dsecuretech.com/logo-white.svg",
@@ -32,17 +32,31 @@ export const getKeywords = (customKeywords?: string[]): string[] => {
   return [
     // --- Primary / Exact Match ---
     "file eraser",
-    "file shredder",
+    "file eraser download",
+    "file eraser software",
+    "file eraser software free",
+    "file eraser windows 10",
+    "file eraser windows 11",
+    "secure eraser",
+    "bitraser file eraser",
+    "eraser file shredder download",
     "file deleter",
     "file wiper",
     "file destroyer",
     "secure file eraser",
     "permanent file eraser",
     "file erasure software",
-    "file shredder software",
     "file deletion software",
     "eraser",
     "Eraser",
+    "eraser software",
+    "eraser software download",
+    "eraser software free",
+    "eraser software for pc",
+    "eraser software free download",
+    "data eraser software",
+    "eraser software review",
+    "eraser software for windows 10",
 
     // --- Long-Tail / Intent Based ---
     "how to permanently delete files",
@@ -58,11 +72,11 @@ export const getKeywords = (customKeywords?: string[]): string[] => {
 
     // --- Standard / Compliance Based ---
     "NIST 800-88 file erasure",
-    "DoD file shredder",
+    "DoD file eraser",
     "GDPR file deletion tool",
     "HIPAA compliant file eraser",
     "ISO 27001 file wiping",
-    "certified file shredder software",
+    "certified file eraser software",
     "compliant file erasure tool",
     "data sanitization software",
     "data erasure compliance tool",
@@ -75,7 +89,7 @@ export const getKeywords = (customKeywords?: string[]): string[] => {
     "endpoint file erasure software",
     "centralized file deletion software",
     "file erasure for IT teams",
-    "file shredder for business",
+    "file eraser for business",
     "corporate data deletion software",
     "active directory file eraser",
 
@@ -83,7 +97,7 @@ export const getKeywords = (customKeywords?: string[]): string[] => {
     "HDD file eraser",
     "SSD file eraser",
     "NVMe file wiper",
-    "USB file shredder",
+    "USB file eraser",
     "external hard drive file eraser",
     "network drive file wiper",
     "file eraser for laptop",
@@ -92,7 +106,7 @@ export const getKeywords = (customKeywords?: string[]): string[] => {
 
     // --- Comparison / Alternatives ---
     "best file eraser software",
-    "best file shredder windows",
+    "best file eraser windows",
     "top secure file deletion tools",
     "file eraser software free vs paid",
     "eraser software alternative",
@@ -116,7 +130,7 @@ export const getKeywords = (customKeywords?: string[]): string[] => {
 
     // --- System Cleanup Related ---
     "free space wiper",
-    "recycle bin shredder",
+    "recycle bin eraser",
     "temp file eraser",
     "browser history eraser",
     "windows registry cleaner",
@@ -124,7 +138,7 @@ export const getKeywords = (customKeywords?: string[]): string[] => {
     "swap file eraser",
     "hibernation file wiper",
     "recent files cleaner",
-    "disk cleanup and file shredder",
+    "disk cleanup and file eraser",
 
     // --- Audit / Reporting ---
     "file erasure certificate",
@@ -138,7 +152,7 @@ export const getKeywords = (customKeywords?: string[]): string[] => {
 
     // --- Scheduler / Automation ---
     "scheduled file eraser",
-    "automatic file shredder",
+    "automatic file eraser",
     "on shutdown file eraser",
     "automated secure file deletion",
     "recurring file wipe tool",
@@ -161,74 +175,74 @@ export const generateOrganizationSchema = () => ({
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": `${SEO_CONFIG.parentSiteUrl}/#organization`,
- name: "File Eraser",
-alternateName: [
-  // --- Common User Terms ---
-  "D-Secure File Eraser",
-  "File Eraser",
-  "File Shredder",
-  "File Deleter",
-  "File Remover",
-  "File Wiper",
-  "File Destroyer",
-  "File Cleaner",
-  "File Scrubber",
-  "File Eliminator",
-  "File Purger",
+  name: "D-Secure File Eraser",
+  alternateName: [
+    // --- Common User Terms ---
+    "D-Secure File Eraser",
+    "File Eraser",
+    "File Eraser",
+    "File Deleter",
+    "File Remover",
+    "File Wiper",
+    "File Destroyer",
+    "File Cleaner",
+    "File Scrubber",
+    "File Eliminator",
+    "File Purger",
 
-  // --- "Secure/Permanent" Variants ---
-  "Secure File Eraser",
-  "Secure File Deletion Tool",
-  "Secure File Shredder",
-  "Secure File Remover",
-  "Secure File Wiper",
-  "Permanent File Eraser",
-  "Permanent File Deleter",
-  "Permanent File Remover",
-  "Permanent File Shredder",
-  "Permanent File Destruction Tool",
+    // --- "Secure/Permanent" Variants ---
+    "Secure File Eraser",
+    "Secure File Deletion Tool",
+    "Secure File Eraser",
+    "Secure File Remover",
+    "Secure File Wiper",
+    "Permanent File Eraser",
+    "Permanent File Deleter",
+    "Permanent File Remover",
+    "Permanent File Eraser",
+    "Permanent File Destruction Tool",
 
-  // --- "Data" Variants ---
-  "Data File Eraser",
-  "Data File Shredder",
-  "Data File Wiper",
-  "Data File Remover",
-  "Data Destruction Tool",
-  "Data Wiping Software",
-  "Data Sanitization Tool",
-  "Data Erasure Software",
-  "Data Scrubbing Tool",
-  "Data Purging Software",
+    // --- "Data" Variants ---
+    "Data File Eraser",
+    "Data File Eraser",
+    "Data File Wiper",
+    "Data File Remover",
+    "Data Destruction Tool",
+    "Data Wiping Software",
+    "Data Sanitization Tool",
+    "Data Erasure Software",
+    "Data Scrubbing Tool",
+    "Data Purging Software",
 
-  // --- Software/Tool/Utility Variants ---
-  "File Erasure Software",
-  "File Shredding Software",
-  "File Deletion Software",
-  "File Wiping Software",
-  "File Shredding Tool",
-  "File Deletion Tool",
-  "File Wiping Tool",
-  "File Erasure Tool",
-  "File Sanitization Tool",
-  "File Sanitization Software",
+    // --- Software/Tool/Utility Variants ---
+    "File Erasure Software",
+    "File Erasure Software",
+    "File Deletion Software",
+    "File Wiping Software",
+    "File Erasure Tool",
+    "File Deletion Tool",
+    "File Wiping Tool",
+    "File Erasure Tool",
+    "File Sanitization Tool",
+    "File Sanitization Software",
 
-  // --- Compliance/Enterprise Terms ---
-  "NIST 800-88 File Eraser",
-  "GDPR File Deletion Tool",
-  "HIPAA Compliant File Eraser",
-  "Certified File Shredder",
-  "Enterprise File Eraser",
-  "Corporate File Deletion Software",
-  "Compliance File Wiper",
-  "Audit-Ready File Eraser",
+    // --- Compliance/Enterprise Terms ---
+    "NIST 800-88 File Eraser",
+    "GDPR File Deletion Tool",
+    "HIPAA Compliant File Eraser",
+    "Certified File Eraser",
+    "Enterprise File Eraser",
+    "Corporate File Deletion Software",
+    "Compliance File Wiper",
+    "Audit-Ready File Eraser",
 
-  // --- Recovery Prevention Angle ---
-  "Unrecoverable File Deletion Tool",
-  "File Overwrite Tool",
-  "Anti-Recovery File Eraser",
-  "File Trace Remover",
-  "Forensic File Eraser",
-],
+    // --- Recovery Prevention Angle ---
+    "Unrecoverable File Deletion Tool",
+    "File Overwrite Tool",
+    "Anti-Recovery File Eraser",
+    "File Trace Remover",
+    "Forensic File Eraser",
+  ],
   url: SEO_CONFIG.parentSiteUrl,
   logo: {
     "@type": "ImageObject",
@@ -255,11 +269,11 @@ alternateName: [
 export const generateWebSiteSchema = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "File Eraser",
+  name: "D-Secure File Eraser",
   url: SEO_CONFIG.siteUrl,
   publisher: {
     "@type": "Organization",
-    name: "File Eraser",
+    name: "D-Secure File Eraser",
     url: SEO_CONFIG.parentSiteUrl,
   },
 });
@@ -277,6 +291,7 @@ export const generateSoftwareProductSchema = (
     ratingValue?: number;
     reviewCount?: number;
     features?: string[];
+    image?: string;
   } = {}
 ) => {
   const schema: Record<string, unknown> = {
@@ -285,6 +300,7 @@ export const generateSoftwareProductSchema = (
     additionalType: "https://schema.org/SoftwareApplication",
     name: productName,
     description: description,
+    image: options.image || `${SEO_CONFIG.parentSiteUrl}/logo-white.svg`,
     applicationCategory: options.category || "SecurityApplication",
     subCategory: options.subCategory || "Data Privacy & Security",
     operatingSystem: options.os || "Windows, Windows Server",
@@ -347,81 +363,83 @@ export const generateSoftwareProductSchema = (
     image: `${SEO_CONFIG.parentSiteUrl}/logo-white.svg`,
     softwareVersion: "2025.1.0",
     featureList: options.features || [
-  // --- Core Erasure Features ---
-  "Secure File Shredding",
-  "Permanent File Deletion",
-  "File Overwrite Technology",
-  "Multi-Pass File Wiping",
-  "Single File Erasure",
-  "Batch File Erasure",
-  "Folder Erasure",
-  "Selective File Wiping",
-  "Drag and Drop File Shredding",
+      // --- Core Erasure Features ---
+      "Secure File Erasure",
+      "Permanent File Deletion",
+      "File Overwrite Technology",
+      "Multi-Pass File Wiping",
+      "Single File Erasure",
+      "Batch File Erasure",
+      "Folder Erasure",
+      "Selective File Wiping",
+      "Drag and Drop File Erasure",
+      "File Eraser",
+      "D-Secure File Eraser",
 
-  // --- Erasure Standards ---
-  "DoD 5220.22-M Wiping Standard",
-  "NIST SP 800-88 Compliant Erasure",
-  "Gutmann 35-Pass Overwrite",
-  "HMG IS5 Baseline and Enhanced",
-  "VSITR Standard Support",
-  "BSI/GOST Erasure Standards",
-  "Custom Overwrite Pass Configuration",
+      // --- Erasure Standards ---
+      "DoD 5220.22-M Wiping Standard",
+      "NIST SP 800-88 Compliant Erasure",
+      "Gutmann 35-Pass Overwrite",
+      "HMG IS5 Baseline and Enhanced",
+      "VSITR Standard Support",
+      "BSI/GOST Erasure Standards",
+      "Custom Overwrite Pass Configuration",
 
-  // --- Storage Media Support ---
-  "HDD File Erasure",
-  "SSD File Erasure",
-  "NVMe File Erasure",
-  "USB Drive File Wiping",
-  "External Hard Drive Support",
-  "Network Drive File Erasure",
-  "Mapped Drive Support",
+      // --- Storage Media Support ---
+      "HDD File Erasure",
+      "SSD File Erasure",
+      "NVMe File Erasure",
+      "USB Drive File Wiping",
+      "External Hard Drive Support",
+      "Network Drive File Erasure",
+      "Mapped Drive Support",
 
-  // --- System Cleanup Features ---
-  "Free Space Wiping",
-  "Recycle Bin Sanitization",
-  "Temporary File Cleaning",
-  "Browser History Erasure",
-  "Windows Registry Trace Removal",
-  "Recent Files List Clearing",
-  "Thumbnail Cache Wiping",
-  "Swap File Erasure",
-  "Hibernation File Wiping",
+      // --- System Cleanup Features ---
+      "Free Space Wiping",
+      "Recycle Bin Sanitization",
+      "Temporary File Cleaning",
+      "Browser History Erasure",
+      "Windows Registry Trace Removal",
+      "Recent Files List Clearing",
+      "Thumbnail Cache Wiping",
+      "Swap File Erasure",
+      "Hibernation File Wiping",
 
-  // --- Reporting & Compliance ---
-  "Erasure Audit Report Generation",
-  "Tamper-Proof Erasure Certificate",
-  "SHA-256 Report Verification",
-  "GDPR Erasure Proof Documentation",
-  "HIPAA Deletion Compliance Report",
-  "ISO 27001 Erasure Logging",
-  "Detailed Erasure Logs",
-  "Export Report as PDF",
+      // --- Reporting & Compliance ---
+      "Erasure Audit Report Generation",
+      "Tamper-Proof Erasure Certificate",
+      "SHA-256 Report Verification",
+      "GDPR Erasure Proof Documentation",
+      "HIPAA Deletion Compliance Report",
+      "ISO 27001 Erasure Logging",
+      "Detailed Erasure Logs",
+      "Export Report as PDF",
 
-  // --- Automation & Scheduling ---
-  "Automated Scheduler",
-  "Scheduled File Wiping",
-  "Recurring Erasure Tasks",
-  "On-Shutdown File Erasure",
-  "Event-Triggered File Deletion",
-  "Silent Background Erasure",
+      // --- Automation & Scheduling ---
+      "Automated Scheduler",
+      "Scheduled File Wiping",
+      "Recurring Erasure Tasks",
+      "On-Shutdown File Erasure",
+      "Event-Triggered File Deletion",
+      "Silent Background Erasure",
 
-  // --- Enterprise & Network ---
-  "Centralized Network Support",
-  "Remote File Erasure",
-  "Active Directory Integration",
-  "Multi-User License Support",
-  "Enterprise Policy Enforcement",
-  "Admin Console Management",
-  "Bulk Erasure Deployment",
-  "Endpoint File Erasure",
+      // --- Enterprise & Network ---
+      "Centralized Network Support",
+      "Remote File Erasure",
+      "Active Directory Integration",
+      "Multi-User License Support",
+      "Enterprise Policy Enforcement",
+      "Admin Console Management",
+      "Bulk Erasure Deployment",
+      "Endpoint File Erasure",
 
-  // --- Security & Verification ---
-  "Post-Erasure Verification",
-  "Data Recovery Prevention",
-  "Forensic-Level File Destruction",
-  "Anti-Recovery Overwrite",
-  "Zero Data Remnant Guarantee",
-],
+      // --- Security & Verification ---
+      "Post-Erasure Verification",
+      "Data Recovery Prevention",
+      "Forensic-Level File Destruction",
+      "Anti-Recovery Overwrite",
+      "Zero Data Remnant Guarantee",
+    ],
   };
 
   // Rating schema agar available hai

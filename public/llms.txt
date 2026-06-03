@@ -1,0 +1,55 @@
+# D-Secure File Eraser
+
+> Certified data erasure software featuring 27+ international sanitization standards (NIST 800-88, DoD 5220.22-M) with digital certificates of destruction.
+
+## Product Information
+- Product Name: D-Secure File Eraser
+- Price: $39.99
+- Rating: 4.9/5 (312 reviews)
+- Website: https://dsecuretech.com/products/file-eraser
+- Pricing: https://dsecuretech.com/pricing-and-plan?product=file-eraser
+- Datasheet: https://assets.dsecuretech.com/pdf/DataSheetFileEraser.pdf
+
+## Overview
+When you press "Delete" on a file, the data stays on your drive — only the reference is removed. Any file recovery tool can bring it back. D-Secure File Eraser solves this by overwriting data at the sector level using internationally recognized erasure algorithms, so the original content becomes permanently unrecoverable — even under forensic analysis.
+
+## Platform Support
+D-Secure File Eraser works natively across Windows, macOS, and Linux — no compatibility patches or emulation layers needed.
+- Windows: Windows 10, 11, Server 2016+
+- macOS: Monterey, Ventura, Sonoma, Sequoia
+- Linux: Ubuntu, CentOS, Debian, RHEL
+
+## Key Features
+- 27+ Sanitization Algorithms: Select from NIST Clear/Purge, DoD 5220.22-M (3-pass, 7-pass), Gutmann 35-pass, HMG IS5 Enhanced, and RCMP TSSIT OPS-II. Each mapped to specific threat models for compliance-driven deployments.
+- CLI & Headless Mode: Run erasure tasks via command-line interface without GUI dependencies. Supports batch scripting, PowerShell integration, and silent execution for automated deployment pipelines.
+- REST API Integration: Trigger erasure jobs programmatically via authenticated REST endpoints. Supports webhook callbacks, JSON status payloads, and integration with SIEM platforms like Splunk and QRadar.
+- Task Scheduler & GPO Hooks: Configure recurring wipe jobs via Windows Task Scheduler, cron, or Group Policy Objects. Event-triggered erasure on logoff, shutdown, or domain-policy push.
+- NTFS ADS & VSS Clearing: Detects and destroys NTFS Alternate Data Streams, Volume Shadow Copies, and $UsnJrnl entries that standard deletion tools leave completely untouched.
+- SHA-256 Signed Certificates: Each erasure generates a digitally signed PDF containing file hash, algorithm used, pass count, operator ID, and UTC timestamp — cryptographically tamper-evident for audit chains.
+- MSI/PKG Silent Deployment: Deploy via MSI (Windows), PKG (macOS), or DEB/RPM (Linux) with zero user interaction. Supports SCCM, Intune, Jamf, and Ansible push deployment workflows.
+- WORM-Compliant Audit Logs: Write-Once-Read-Many log architecture ensures erasure records cannot be modified or deleted post-creation — meeting SEC Rule 17a-4 and FINRA retention requirements.
+- Pre-Erasure AES-256 Encryption: AES-256-CBC encryption applied before overwrite begins. If erasure is interrupted mid-process, data remains cryptographically inaccessible — zero cleartext exposure window.
+- Centralized Telemetry Dashboard: Real-time monitoring of erasure progress across all endpoints. Filter by asset tag, operator, erasure standard, or completion status — exportable to CSV/SIEM.
+
+## Erasure Target Categories
+Six attack surfaces where D-Secure File Eraser performs sector-level data destruction — from local NTFS volumes to remote SMB shares:
+- Selective File & Folder Erasure: Overwrite individual files or recursive directory trees using selected algorithms. Supports wildcard patterns, regex-based file matching, and exclusion lists for surgical data destruction.
+- Unallocated Space & MFT Cleanup: Scans and overwrites unallocated clusters, MFT entries, and $MFT slack space to prevent file-carving attacks. Eliminates ghost data that persists after standard Recycle Bin deletion.
+- Cloud Cache & Sync Destruction: Targets locally cached sync copies from Google Drive, OneDrive, and Dropbox. Clears versioned file histories and thumbnail databases that standard uninstall procedures leave behind.
+- Network Share & SMB Erasure: Connects to mapped network drives and UNC paths to destroy files on remote SMB/CIFS shares. Supports credential-based authentication for enterprise NAS and file server environments.
+- Archive & Container Sanitization: Penetrates ZIP, TAR, ISO, and VHD containers to individually shred enclosed files before destroying the archive itself. Handles nested archives and password-protected containers.
+- Full Volume Sterilization: Overwrites entire volumes including slack space, boot sectors, and partition tables. Essential for ITAD workflows where drives must be certified clean before reassignment or disposal.
+
+## Compliance Standards
+- NIST 800-88 Rev.1: Maps File Eraser's 27+ algorithms to Clear (single-pass zero-fill) and Purge (multi-pass pattern overwrite) sanitization categories defined in SP 800-88 Revision 1.
+- DoD 5220.22-M ECE: Implements the Extended (7-pass) variant: alternating 0x00, 0xFF, and PRNG passes with verification reads after each cycle — exceeding baseline 3-pass requirements.
+- GDPR Art. 17: Automated right-to-erasure pipeline: ingest data subject requests, locate matching files across endpoints, execute verified erasure, and generate per-request audit certificates.
+- HIPAA §164.310: Satisfies the Device and Media Controls implementation specification (d)(2)(i) — certified ePHI disposal with cryptographic verification and chain-of-custody documentation.
+- SOX §802: WORM-compliant audit logs ensure erasure records meet Sarbanes-Oxley Section 802 retention requirements — immutable, timestamped, and digitally signed.
+- PCI-DSS v4.0: Fulfills Requirement 3.1 and 9.4.6 for cryptographic erasure of cardholder data. Supports tokenized file tracking for PCI scope reduction documentation.
+
+## Use Cases
+- Endpoint Decommissioning & ITAD: Sanitize laptops, desktops, and workstations before returning leased hardware or transferring assets between departments — with verifiable NIST 800-88 Purge certification per device.
+- Data Center Storage Retirement: Wipe file server volumes, NAS shares, and SAN LUNs before hardware decommissioning. Generate per-volume erasure certificates for asset disposal audit trails.
+- Regulatory Compliance Workflows: Automate GDPR Article 17 right-to-erasure requests across file shares. Batch-process deletion requests with per-file audit certificates for DPA submission.
+- M&A Due Diligence Sanitization: During mergers and acquisitions, selectively destroy confidential IP, trade secrets, and privileged communications from shared infrastructure before entity transfer.

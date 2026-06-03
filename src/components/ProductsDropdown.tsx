@@ -11,11 +11,11 @@ const colorClasses: Record<string, {
   border: string; hoverBorder: string; text: string; hoverText: string;
   bg: string; hoverBg: string; borderPill: string; pulse: string;
 }> = {
-  emerald: {
-    border: "border-emerald-300", hoverBorder: "hover:border-emerald-300",
-    text: "text-emerald-700", hoverText: "group-hover:text-emerald-700",
-    bg: "bg-emerald-50", hoverBg: "hover:bg-emerald-100",
-    borderPill: "border-emerald-200", pulse: "bg-emerald-400",
+  orange: {
+    border: "border-orange-300", hoverBorder: "hover:border-orange-300",
+    text: "text-orange-700", hoverText: "group-hover:text-orange-700",
+    bg: "bg-orange-50", hoverBg: "hover:bg-orange-100",
+    borderPill: "border-orange-200", pulse: "bg-orange-400",
   },
   blue: {
     border: "border-blue-300", hoverBorder: "hover:border-blue-300",
@@ -29,11 +29,11 @@ const colorClasses: Record<string, {
     bg: "bg-cyan-50", hoverBg: "hover:bg-cyan-100",
     borderPill: "border-cyan-200", pulse: "bg-cyan-400",
   },
-  teal: {
-    border: "border-teal-300", hoverBorder: "hover:border-teal-300",
-    text: "text-teal-700", hoverText: "group-hover:text-teal-700",
-    bg: "bg-teal-50", hoverBg: "hover:bg-teal-100",
-    borderPill: "border-teal-200", pulse: "bg-teal-400",
+  amber: {
+    border: "border-amber-300", hoverBorder: "hover:border-amber-300",
+    text: "text-amber-700", hoverText: "group-hover:text-amber-700",
+    bg: "bg-amber-50", hoverBg: "hover:bg-amber-100",
+    borderPill: "border-amber-200", pulse: "bg-amber-400",
   },
   rose: {
     border: "border-rose-300", hoverBorder: "hover:border-rose-300",
@@ -44,7 +44,7 @@ const colorClasses: Record<string, {
 };
 
 // Helper — color ke liye safe class return karo
-const c = (color: string) => colorClasses[color] || colorClasses.emerald;
+const c = (color: string) => colorClasses[color] || colorClasses.orange;
 
 // Product card ka type definition
 interface ProductCard {
@@ -62,55 +62,55 @@ const TABS: Record<string, { label: string; products: ProductCard[] }> = {
     products: [
       {
         name: "Drive Eraser", desc: "Erase HDD, SSD, PC, Mac & Server data permanently.",
-        href: `${DSECURE_BASE_URL}/products/drive-eraser`, color: "emerald",
+        href: `${DSECURE_BASE_URL}/products/drive-eraser`, color: "orange",
         variants: [
-          { label: "Drive Eraser", href: `${DSECURE_BASE_URL}/products/drive-eraser`, color: "emerald" },
+          { label: "Drive Eraser", href: `${DSECURE_BASE_URL}/products/drive-eraser`, color: "orange" },
           { label: "Diagnostic & Health", href: `${DSECURE_BASE_URL}/products/drive-eraser-diagnostic`, color: "blue", pulse: true },
         ],
       },
       {
-        name: "File Eraser", desc: "Wipe files, folders, traces & browser history.",
+        name: "D-Secure File Eraser", desc: "Wipe files, folders, traces & browser history.",
         href: `${DSECURE_BASE_URL}/products/file-eraser`, color: "blue",
         variants: [
           { label: "Standard", href: `${DSECURE_BASE_URL}/products/file-eraser`, color: "blue" },
-          { label: "Network Edition", href: `${DSECURE_BASE_URL}/products/file-eraser-network`, color: "emerald", pulse: true },
+          { label: "Network Edition", href: `${DSECURE_BASE_URL}/products/file-eraser-network`, color: "orange", pulse: true },
         ],
       },
-      { name: "Smartphone Eraser", desc: "Bulk iOS & Android wiping with audit reports.", href: `${DSECURE_BASE_URL}/products/smartphone-eraser`, color: "emerald" },
-      { name: "Virtual Machine Eraser", desc: "Securely wipe VMs on ESXi & Hyper-V hosts.", href: `${DSECURE_BASE_URL}/products/virtual-machine-eraser`, color: "emerald" },
-      { name: "Removable Media Eraser", desc: "Securely erase USB & flash storage devices.", href: `${DSECURE_BASE_URL}/products/removable-media-eraser`, color: "emerald" },
-      { name: "LUN Eraser", desc: "Sanitize Logical Unit Numbers in active storage.", href: `${DSECURE_BASE_URL}/products/lun-eraser`, color: "emerald" },
+      { name: "Smartphone Eraser", desc: "Bulk iOS & Android wiping with audit reports.", href: `${DSECURE_BASE_URL}/products/smartphone-eraser`, color: "orange" },
+      { name: "Virtual Machine Eraser", desc: "Securely wipe VMs on ESXi & Hyper-V hosts.", href: `${DSECURE_BASE_URL}/products/virtual-machine-eraser`, color: "orange" },
+      { name: "Removable Media Eraser", desc: "Securely erase USB & flash storage devices.", href: `${DSECURE_BASE_URL}/products/removable-media-eraser`, color: "orange" },
+      { name: "LUN Eraser", desc: "Sanitize Logical Unit Numbers in active storage.", href: `${DSECURE_BASE_URL}/products/lun-eraser`, color: "orange" },
     ],
   },
   migration: {
     label: "Migration",
     products: [
-      { name: "Data Migration", desc: "Secure transfer across Cloud & Infrastructure.", href: `${DSECURE_BASE_URL}/products/data-migration`, color: "emerald" },
+      { name: "Data Migration", desc: "Secure transfer across Cloud & Infrastructure.", href: `${DSECURE_BASE_URL}/products/data-migration`, color: "orange" },
       { name: "Forensic Imaging", desc: "Bit-for-bit acquisition & cryptographic hashing.", href: `${DSECURE_BASE_URL}/products/forensic-imaging`, color: "cyan" },
       {
         name: "FreezeState", desc: "Reboot-to-restore system protection.",
         href: `${DSECURE_BASE_URL}/products/freeze-state`, color: "blue",
         variants: [
-          { label: "Smart Diagnostic", href: `${DSECURE_BASE_URL}/products/freeze-state-smart`, color: "emerald", pulse: true },
+          { label: "Smart Diagnostic", href: `${DSECURE_BASE_URL}/products/freeze-state-smart`, color: "orange", pulse: true },
           { label: "Advanced Eraser", href: `${DSECURE_BASE_URL}/products/freeze-state-advanced`, color: "blue", pulse: true },
         ],
       },
-      { name: "Asset Reimaging", desc: "Automated OS deployment & imaging solution.", href: `${DSECURE_BASE_URL}/products/asset-reimaging`, color: "emerald" },
+      { name: "Asset Reimaging", desc: "Automated OS deployment & imaging solution.", href: `${DSECURE_BASE_URL}/products/asset-reimaging`, color: "orange" },
     ],
   },
   diagnostics: {
     label: "Diagnostics",
     products: [
-      { name: "Hardware Diagnostics", desc: "Enterprise-grade diagnostic tools.", href: `${DSECURE_BASE_URL}/products/hardware-diagnostics`, color: "emerald" },
-      { name: "Smartphone Diagnostics", desc: "50+ automated tests for mobile health.", href: `${DSECURE_BASE_URL}/products/smartphone-diagnostic`, color: "teal" },
+      { name: "Hardware Diagnostics", desc: "Enterprise-grade diagnostic tools.", href: `${DSECURE_BASE_URL}/products/hardware-diagnostics`, color: "orange" },
+      { name: "Smartphone Diagnostics", desc: "50+ automated tests for mobile health.", href: `${DSECURE_BASE_URL}/products/smartphone-diagnostic`, color: "amber" },
       { name: "SMART Diagnostics", desc: "Health monitoring & disk cloning.", href: `${DSECURE_BASE_URL}/products/hard-drive-monitor`, color: "rose" },
-      { name: "Autopilot Detection", desc: "Windows Autopilot identification.", href: `${DSECURE_BASE_URL}/products/autopilot-detection`, color: "emerald" },
+      { name: "Autopilot Detection", desc: "Windows Autopilot identification.", href: `${DSECURE_BASE_URL}/products/autopilot-detection`, color: "orange" },
     ],
   },
   verification: {
     label: "Verification",
     products: [
-      { name: "Erasure Verification", desc: "Forensic verification & post-erasure audit tools.", href: `${DSECURE_BASE_URL}/products/drive-verifier`, color: "emerald" },
+      { name: "Erasure Verification", desc: "Forensic verification & post-erasure audit tools.", href: `${DSECURE_BASE_URL}/products/drive-verifier`, color: "orange" },
     ],
   },
 };
@@ -144,13 +144,13 @@ export default function ProductsDropdown({ onClose }: { onClose: () => void }) {
               key={key}
               className={`w-full text-left px-5 py-3 text-sm font-medium transition-colors flex items-center gap-2 ${
                 activeTab === key
-                  ? "text-emerald-700 bg-white border-r-2 border-emerald-500 font-semibold"
+                  ? "text-orange-700 bg-white border-r-2 border-orange-500 font-semibold"
                   : "text-slate-600 hover:text-slate-900 hover:bg-white/60"
               }`}
               onClick={() => setActiveTab(key)}
             >
               {tab.label}
-              {activeTab === key && <ChevronRight className="w-3.5 h-3.5 ml-auto text-emerald-500" />}
+              {activeTab === key && <ChevronRight className="w-3.5 h-3.5 ml-auto text-orange-500" />}
             </button>
           ))}
 
@@ -158,7 +158,7 @@ export default function ProductsDropdown({ onClose }: { onClose: () => void }) {
           <div className="mt-6 px-5">
             <a
               href={`${DSECURE_BASE_URL}/products`}
-              className="text-xs font-semibold text-emerald-600 hover:text-emerald-700 uppercase tracking-wide flex items-center gap-1"
+              className="text-xs font-semibold text-orange-600 hover:text-orange-700 uppercase tracking-wide flex items-center gap-1"
               onClick={onClose}
             >
               Explore All Products <ChevronRight className="w-3 h-3" />

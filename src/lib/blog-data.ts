@@ -15,7 +15,7 @@ export interface BlogPost {
   link: string;
 }
 
-// File Eraser page pe dikhne wale related blogs - screen shot ke anusar updated
+// D-Secure File Eraser page pe dikhne wale related blogs - screen shot ke anusar updated
 export const relatedBlogs: BlogPost[] = [
   {
     id: "overwrite-standards-basics",

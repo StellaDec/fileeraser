@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "File Eraser — Certified Data Erasure Software",
+  title: "D-Secure File Eraser — Certified Data Erasure Software",
   description: "NIST 800-88 compliant secure data erasure software for Windows, Mac & Linux. Permanently delete files, folders, and partition traces beyond forensic recovery.",
   icons: {
-    icon: "https://res.cloudinary.com/dhwi5wevf/image/upload/v1759928831/bwsswefvwhdvuy8yrplk.png",
-    apple: "https://res.cloudinary.com/dhwi5wevf/image/upload/v1759928831/bwsswefvwhdvuy8yrplk.png",
+    icon: "https://res.cloudinary.com/dhwi5wevf/image/upload/v1759503993/ec8v6wcjdpwgpplobi3w.svg",
+    apple: "https://res.cloudinary.com/dhwi5wevf/image/upload/v1759503993/ec8v6wcjdpwgpplobi3w.svg",
   },
 };
 

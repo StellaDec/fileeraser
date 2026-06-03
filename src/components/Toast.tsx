@@ -54,7 +54,7 @@ export function ToastProvider({ children }: Readonly<{ children: ReactNode }>) {
               animate-[slideIn_0.3s_ease-out]
               ${
                 toast.type === "success"
-                  ? "bg-emerald-600"
+                  ? "bg-orange-600"
                   : "bg-red-600"
               }`}
           >

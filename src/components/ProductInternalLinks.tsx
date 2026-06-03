@@ -22,7 +22,7 @@ export default function ProductInternalLinks({
   return (
     <section
       aria-label="Related D-Secure Products"
-      className="py-12 px-6 bg-gradient-to-br from-emerald-50/50 to-blue-50/50 border-t border-slate-200"
+      className="py-12 px-6 bg-gradient-to-br from-orange-50/50 to-blue-50/50 border-t border-slate-200"
     >
       <div className="max-w-[1100px] mx-auto">
         <h2 className="text-2xl font-bold text-slate-900 mb-2 text-center">
@@ -38,7 +38,7 @@ export default function ProductInternalLinks({
             <a
               key={product.href}
               href={product.href}
-              className="group flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200 hover:border-emerald-500 hover:shadow-lg hover:shadow-emerald-500/10 transition-all duration-200"
+              className="group flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200 hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-200"
               title={`${product.label} — D-Secure Data Security`}
             >
               {/* Icon */}
@@ -46,7 +46,7 @@ export default function ProductInternalLinks({
                 {product.icon}
               </span>
               <div>
-                <span className="block font-semibold text-slate-900 text-sm group-hover:text-emerald-700 transition-colors">
+                <span className="block font-semibold text-slate-900 text-sm group-hover:text-orange-700 transition-colors">
                   {product.label}
                 </span>
                 <span className="block text-slate-500 text-xs leading-relaxed mt-1">

@@ -1,0 +1,84 @@
+# D-Secure File Eraser — Complete Product Documentation
+
+> Certified data erasure software featuring 27+ international sanitization standards (NIST 800-88, DoD 5220.22-M) with digital certificates of destruction.
+
+## Product Information
+- Product Name: D-Secure File Eraser
+- Price: $39.99
+- Rating: 4.9/5 (312 reviews)
+- Website: https://dsecuretech.com/products/file-eraser
+- Pricing: https://dsecuretech.com/pricing-and-plan?product=file-eraser
+- Datasheet: https://assets.dsecuretech.com/pdf/DataSheetFileEraser.pdf
+
+## Overview
+When you press "Delete" on a file, the data stays on your drive — only the reference is removed. Any file recovery tool can bring it back. D-Secure File Eraser solves this by overwriting data at the sector level using internationally recognized erasure algorithms, so the original content becomes permanently unrecoverable — even under forensic analysis.
+
+## Platform Support
+D-Secure File Eraser works natively across Windows, macOS, and Linux — no compatibility patches or emulation layers needed.
+- Windows: Windows 10, 11, Server 2016+
+- macOS: Monterey, Ventura, Sonoma, Sequoia
+- Linux: Ubuntu, CentOS, Debian, RHEL
+
+## Key Features — Implementation-Ready Security Architecture
+Technical capabilities that differentiate D-Secure from consumer-grade deletion utilities and basic disk cleanup tools:
+
+- 27+ Sanitization Algorithms: Select from NIST Clear/Purge, DoD 5220.22-M (3-pass, 7-pass), Gutmann 35-pass, HMG IS5 Enhanced, and RCMP TSSIT OPS-II. Each mapped to specific threat models for compliance-driven deployments.
+- CLI & Headless Mode: Run erasure tasks via command-line interface without GUI dependencies. Supports batch scripting, PowerShell integration, and silent execution for automated deployment pipelines.
+- REST API Integration: Trigger erasure jobs programmatically via authenticated REST endpoints. Supports webhook callbacks, JSON status payloads, and integration with SIEM platforms like Splunk and QRadar.
+- Task Scheduler & GPO Hooks: Configure recurring wipe jobs via Windows Task Scheduler, cron, or Group Policy Objects. Event-triggered erasure on logoff, shutdown, or domain-policy push.
+- NTFS ADS & VSS Clearing: Detects and destroys NTFS Alternate Data Streams, Volume Shadow Copies, and $UsnJrnl entries that standard deletion tools leave completely untouched.
+- SHA-256 Signed Certificates: Each erasure generates a digitally signed PDF containing file hash, algorithm used, pass count, operator ID, and UTC timestamp — cryptographically tamper-evident for audit chains.
+- MSI/PKG Silent Deployment: Deploy via MSI (Windows), PKG (macOS), or DEB/RPM (Linux) with zero user interaction. Supports SCCM, Intune, Jamf, and Ansible push deployment workflows.
+- WORM-Compliant Audit Logs: Write-Once-Read-Many log architecture ensures erasure records cannot be modified or deleted post-creation — meeting SEC Rule 17a-4 and FINRA retention requirements.
+- Pre-Erasure AES-256 Encryption: AES-256-CBC encryption applied before overwrite begins. If erasure is interrupted mid-process, data remains cryptographically inaccessible — zero cleartext exposure window.
+- Centralized Telemetry Dashboard: Real-time monitoring of erasure progress across all endpoints. Filter by asset tag, operator, erasure standard, or completion status — exportable to CSV/SIEM.
+
+## Erasure Target Categories
+Six attack surfaces where D-Secure File Eraser performs sector-level data destruction — from local NTFS volumes to remote SMB shares:
+
+- Selective File & Folder Erasure: Overwrite individual files or recursive directory trees using selected algorithms. Supports wildcard patterns, regex-based file matching, and exclusion lists for surgical data destruction.
+- Unallocated Space & MFT Cleanup: Scans and overwrites unallocated clusters, MFT entries, and $MFT slack space to prevent file-carving attacks. Eliminates ghost data that persists after standard Recycle Bin deletion.
+- Cloud Cache & Sync Destruction: Targets locally cached sync copies from Google Drive, OneDrive, and Dropbox. Clears versioned file histories and thumbnail databases that standard uninstall procedures leave behind.
+- Network Share & SMB Erasure: Connects to mapped network drives and UNC paths to destroy files on remote SMB/CIFS shares. Supports credential-based authentication for enterprise NAS and file server environments.
+- Archive & Container Sanitization: Penetrates ZIP, TAR, ISO, and VHD containers to individually shred enclosed files before destroying the archive itself. Handles nested archives and password-protected containers.
+- Full Volume Sterilization: Overwrites entire volumes including slack space, boot sectors, and partition tables. Essential for ITAD workflows where drives must be certified clean before reassignment or disposal.
+
+## Compliance Standards
+- NIST 800-88 Rev.1: Maps File Eraser's 27+ algorithms to Clear (single-pass zero-fill) and Purge (multi-pass pattern overwrite) sanitization categories defined in SP 800-88 Revision 1.
+- DoD 5220.22-M ECE: Implements the Extended (7-pass) variant: alternating 0x00, 0xFF, and PRNG passes with verification reads after each cycle — exceeding baseline 3-pass requirements.
+- GDPR Art. 17: Automated right-to-erasure pipeline: ingest data subject requests, locate matching files across endpoints, execute verified erasure, and generate per-request audit certificates.
+- HIPAA §164.310: Satisfies the Device and Media Controls implementation specification (d)(2)(i) — certified ePHI disposal with cryptographic verification and chain-of-custody documentation.
+- SOX §802: WORM-compliant audit logs ensure erasure records meet Sarbanes-Oxley Section 802 retention requirements — immutable, timestamped, and digitally signed.
+- PCI-DSS v4.0: Fulfills Requirement 3.1 and 9.4.6 for cryptographic erasure of cardholder data. Supports tokenized file tracking for PCI scope reduction documentation.
+
+## Use Cases
+- Endpoint Decommissioning & ITAD: Sanitize laptops, desktops, and workstations before returning leased hardware or transferring assets between departments — with verifiable NIST 800-88 Purge certification per device.
+- Data Center Storage Retirement: Wipe file server volumes, NAS shares, and SAN LUNs before hardware decommissioning. Generate per-volume erasure certificates for asset disposal audit trails.
+- Regulatory Compliance Workflows: Automate GDPR Article 17 right-to-erasure requests across file shares. Batch-process deletion requests with per-file audit certificates for DPA submission.
+- M&A Due Diligence Sanitization: During mergers and acquisitions, selectively destroy confidential IP, trade secrets, and privileged communications from shared infrastructure before entity transfer.
+
+## Frequently Asked Questions
+
+### What is file eraser software?
+File eraser software permanently removes files from a storage device by overwriting the space they occupied with random data — typically zeros, ones, or random patterns. Unlike the standard delete function in Windows or macOS, which only removes the file's reference in the file system, a file eraser makes the original data unreadable and unrecoverable. The result is a clean, irreversible removal that no recovery tool can undo. This is essential for protecting sensitive business data, intellectual property, and personal identifiable information (PII) from malicious actors. When you use a specialized tool like D-Secure File Eraser, the software communicates directly with the storage controller to ensure that every single block previously allocated to the target file is fully sanitized. By utilizing standardized algorithms such as NIST 800-88 or DoD 5220.22-M, file eraser software guarantees that your erased data cannot be carved or reconstructed by forensic data recovery experts, providing complete peace of mind when decommissioning hardware or ensuring regulatory compliance.
+
+### What is the difference between deleting a file and erasing it?
+When you delete a file — even using Shift+Delete or emptying the Recycle Bin — the operating system only removes the file's entry from the directory. The actual data remains on the disk until another file happens to overwrite it. A skilled person using free recovery software can restore that data within minutes. File erasing is fundamentally different. The eraser overwrites the file's physical storage location with random characters, null bytes, or complex algorithmic patterns. Depending on the selected standard, this overwrite process might happen multiple times to ensure absolute data destruction. Deleting is an administrative function for managing disk space, whereas erasing is a security function designed to prevent unauthorized data access. For businesses handling confidential data, simply deleting files leaves a massive security vulnerability. Using a secure file eraser ensures that the underlying magnetic or flash storage medium is purged of the data fragments, rendering the original information completely permanently destroyed and unrecoverable by any means.
+
+### How many overwrite passes does a file eraser actually need to be secure?
+The required number of overwrite passes depends heavily on the type of storage media and the specific regulatory compliance framework you are following. For modern Hard Disk Drives (HDDs) and Solid State Drives (SSDs), the National Institute of Standards and Technology (NIST) Special Publication 800-88 Revision 1 guidelines state that a single verified overwrite pass (NIST Clear) is sufficient to sanitize the data and prevent recovery from keyboard attacks. However, legacy standards such as the Department of Defense (DoD) 5220.22-M mandate three to seven overwrite passes using alternating patterns of zeros, ones, and pseudo-random data. Highly sensitive government or military environments might even require the Gutmann method, which utilizes 35 distinct overwrite passes. D-Secure File Eraser provides flexibility by offering over 27 international sanitization algorithms, allowing IT administrators to select the exact number of passes required to satisfy their organization's specific security policies and compliance audits.
+
+### Does file erasure work differently on SSDs compared to traditional HDDs?
+Yes, securely erasing data on Solid State Drives (SSDs) is significantly more complex than on traditional Hard Disk Drives (HDDs). HDDs store data on magnetic platters, allowing software to directly overwrite specific physical sectors. SSDs, however, use NAND flash memory and employ complex wear-leveling algorithms managed by the drive's firmware controller. This means when you attempt to overwrite a file, the SSD might write the new data to a completely different physical flash cell to prolong the drive's lifespan, leaving the original data intact but unmapped. To effectively sanitize SSDs, advanced file eraser software like D-Secure must bypass the operating system's standard write commands and communicate directly with the SSD controller to issue Secure Erase or NVMe Format commands. Alternatively, it must utilize specialized SSD sanitization algorithms that overwrite the unallocated space and over-provisioned areas to ensure that all hidden copies of the data are thoroughly destroyed without excessively degrading the drive's health.
+
+### What proof do I get after erasing files for a compliance audit?
+In regulated industries, the act of erasing data must be accompanied by immutable proof of destruction to satisfy compliance audits. D-Secure File Eraser automatically generates a comprehensive, digitally signed Certificate of Erasure upon the successful completion of any sanitization task. This tamper-proof PDF document serves as a legally defensible audit trail. The certificate includes critical details such as the precise file paths, the specific overwrite algorithm utilized (e.g., NIST 800-88 Purge), the number of completed passes, the cryptographic SHA-256 verification hash of the erased sectors, the hardware details of the host machine, the timestamp of the operation in UTC, and the operator's user credentials. By maintaining these Write-Once-Read-Many (WORM) compliant records, organizations can effortlessly demonstrate adherence to stringent data privacy regulations like GDPR, HIPAA, and SOX, proving to auditors that the sensitive data was disposed of securely and is permanently unrecoverable.
+
+### Can file eraser software sanitize unallocated disk space and MFT records?
+Absolutely. One of the most critical features of an enterprise-grade file eraser is its ability to sanitize unallocated space and Master File Table (MFT) records. Over time, as files are normally deleted by the operating system, fragments of sensitive data accumulate in the unallocated clusters of the hard drive. Additionally, the NTFS file system retains metadata, file names, and sometimes small file contents directly within the MFT slack space. D-Secure File Eraser is engineered to systematically scan the entire storage volume and overwrite all unallocated sectors, ensuring that previously deleted files cannot be carved out using forensic tools. Furthermore, it explicitly targets and cleanses the MFT entries, Alternate Data Streams (ADS), and Volume Shadow Copies (VSS), eliminating all residual traces of the files. This holistic approach guarantees a pristine storage environment, which is vital before transferring hardware ownership or decommissioning an endpoint.
+
+### How does file eraser software integrate with enterprise deployments?
+Enterprise IT environments require scalable and automated solutions for data sanitization. D-Secure File Eraser is designed with enterprise deployments in mind, offering extensive integration capabilities. It can be silently deployed across thousands of endpoints using standard IT management tools such as Microsoft SCCM, Microsoft Intune, Jamf, or Ansible via MSI, PKG, and DEB/RPM packages. Once deployed, system administrators can enforce data destruction policies centrally using Group Policy Objects (GPO), ensuring that specific folders or temporary files are automatically securely erased upon user logoff or system shutdown. Additionally, the software features a robust Command Line Interface (CLI) and REST API, enabling IT teams to integrate automated erasure tasks directly into their existing incident response playbooks, DevOps pipelines, and Security Information and Event Management (SIEM) platforms for centralized telemetry and compliance monitoring.
+
+### Is it safe to use a file eraser on a live operating system?
+Yes, utilizing a sector-level file eraser on a live operating system is completely safe when designed correctly. Unlike full-disk wiping tools that destroy the operating system and render the computer unbootable, a targeted file eraser selectively overwrites only the specific files, folders, or unallocated free space chosen by the user. D-Secure File Eraser operates securely within the bounds of the live OS, ensuring that critical system files, boot sectors, and unaffected applications remain entirely untouched and fully operational. Furthermore, D-Secure employs safety mechanisms such as pre-erasure AES-256 encryption. If a targeted erasure process is unexpectedly interrupted due to a power failure or system crash, the targeted data remains cryptographically inaccessible, preventing any cleartext data exposure. This allows businesses to seamlessly sanitize sensitive files during normal business operations without incurring any system downtime.
